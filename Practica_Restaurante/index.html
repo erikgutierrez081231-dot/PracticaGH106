@@ -1,0 +1,38 @@
+<h1>Aplicación de pedidos</h1>
+<div class="productos">
+  <div class="producto">
+    <img src="images2.jpeg" alt="Sushi", width="200", height="300">
+    <h2>Sushi</h2>
+    <p>Precio: $100 MXN</p>
+    <label>Cantidad: <input type="number" id="cantSushi" value="1" min="1"></label>
+    <button onclick="comprar('Sushi', 100, 'cantSushi')">Comprar</button>
+  </div>
+  <div class="producto">
+    <img src="sushi.jpg" alt="Ramen", width="200", height="300">
+    <h2>Ramen</h2>
+    <p>Precio: $120 MXN</p>
+    <label>Cantidad: <input type="number" id="cantRamen" value="1" min="1"></label>
+    <button onclick="comprar('Ramen', 120, 'cantRamen')">Comprar</button>
+  </div>
+  <div class="producto">
+    <img src="sushi3.webp" alt="Tempura", width="200", height="300">
+    <h2>Tempura</h2>
+    <p>Precio: $90 MXN</p>
+    <label>Cantidad: <input type="number" id="cantTempura" value="1" min="1"></label>
+    <button onclick="comprar('Tempura', 90, 'cantTempura')">Comprar</button>
+  </div>
+</div>
+
+<div id="carrito">
+  <h2>Carrito (<span id="contador">0</span> artículos)</h2>
+  <ul id="listaPedidos"></ul>
+  <p id="total">Total: $0 MXN</p>
+
+  <label for="cupon">Código de descuento:</label>
+  <input type="text" id="cupon" placeholder="Ej: DESCUENTO10">
+  <button onclick="aplicarCupon()">Aplicar cupón</button>
+
+  <br><br>
+  <button onclick="confirmarCompra()">Confirmar compra</button>
+  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+</div>
